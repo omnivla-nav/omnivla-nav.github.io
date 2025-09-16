@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+        content="Learning to Drive Anyware via Model-Based Reannotation">
+    <meta name="keywords" content="navigation, robotics, foundation model, dataset, MBRA, LogoNav">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Learning to Drive Anyware via Model-Based Reannotation</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYH3N96LN5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZYH3N96LN5');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/slick.css">
+    <link rel="stylesheet" href="./static/css/slick-theme.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/images/favicon.svg">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/slick.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu">
+            <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        More Research
+                    </a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="https://svl.stanford.edu/projects/dvmpc/">
+                            DVMPC: Deep Visual MPC-Policy Learning for Navigation
+                        </a>
+                        <a class="navbar-item" href="https://sites.google.com/view/exaug-nav">
+                            ExAug: Robot-conditioned Navigation Policies via Geometric Experience Augmentation
+                        </a>                      
+                        <a class="navbar-item" href="https://general-navigation-models.github.io/vint/index.html">
+                            ViNT: A Foundation Model for Visual Navigation
+                        </a>
+                        <a class="navbar-item" href="https://sites.google.com/view/sacson-review/home">
+                            SACSoN: Scalable Autonomous Control for Social Navigation
+                        </a>
+                        <a class="navbar-item" href="https://learning-language-navigation.github.io/">
+                            LeLaN: Learning A Language-conditioned Navigation Policy from In-the-Wild Video
+                        </a>                          
+                        <a class="navbar-item" href="https://model-base-reannotation.github.io/">
+                            Learning to Drive Anyware with Model-Based Reannotation
+                        </a>                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-2 publication-title">OmniVLA: An Omni-Modal Vision-Language-Action Model for Robot Navigation</h1>                        
+                                       
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <a href="https://sites.google.com/view/noriaki-hirose/">Noriaki Hirose</a><sup>1, 2</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://catglossop.github.io/">Catherine Glossop</a><sup>1</sup>,
+                            </span>                            
+                            <span class="author-block">
+                                <a href="https://robodhruv.github.io/">Dhruv Shah</a><sup>1, 3</sup>,
+                            </span>                            
+                            <span class="author-block">
+                                <a href="https://cs.berkeley.edu/~svlevine">Sergey Levine</a><sup>1</sup>
+                            </span>                            
+                        </div>
+
+                        <div class="is-size-6 publication-authors">
+                            <span class="author-block"> <sup>1</sup> University of California, Berkeley,   <sup>2</sup> Toyota Motor North America,   <sup>3</sup> Princeton University</span>
+                        </div>
+                        <br>
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- PDF Link. -->
+                                <span class="link-block">
+                                    <a href="https://www.arxiv.org/abs/2505.05592"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                    <i class="fas fa-file-pdf"></i>
+                                    </span>
+                                    <span>Paper</span>
+                                    </a>
+                                </span>                            
+                                <!-- Talk Link. -->
+                                <span class="link-block">
+                                    <a href="https://youtu.be/U43FNoy9OIM"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-youtube"></i>
+                                        </span>
+                                        <span>YouTube</span>
+                                    </a>
+                                </span>
+                                <!-- Code Link. -->
+                                <span class="link-block">
+                                    <a href="https://github.com/NHirose/Learning-to-Drive-Anywhere-via-MBRA"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github-alt"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+                                <!-- Dataset Link. -->
+                                <span class="link-block">
+                                    <a href="https://github.com/NHirose/Learning-to-Drive-Anywhere-with-MBRA?tab=readme-ov-file#dataset"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-database"></i> </span>
+                                        <span>Data</span>
+                                    </a>
+                                </span>
+
+                                <!-- BibTex -->
+                                <span class="link-block">
+                                    <a href="./static/omnivla.bib"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-quote-left"></i> </span>
+                                        <span>BibTex</span>
+                                    </a>
+                                </span>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero teaser">
+        <div class="container is-max-desktop is-centered has-text-justified is-size-5">
+            <div class="hero-body">
+                <video id="teaser" disableRemotePlayback autoplay muted loop playsinline fetchpriority="high"
+                    poster="./static/images/web_pull.jpeg">
+                    <source src="./static/videos_mbra/web_pull.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+            Humans can flexibly interpret and compose different goal specifications, such as language instructions, spatial coordinates, or visual references, when navigating to a destination. In contrast, most existing robotic navigation policies are trained on a single modality, limiting their adaptability to real-world scenarios where different forms of goal specification are natural and complementary. In this work, we present a training framework for robotic foundation models that enables omni-modal goal conditioning for vision-based navigation. Our approach leverages a high-capacity vision-language-action (VLA) backbone and trains with three primary goal modalities: 2D poses, egocentric images, and natural language, as well as their combinations, through a randomized modality fusion strategy. This design not only expands the pool of usable datasets but also encourages the policy to develop richer geometric, semantic, and visual representations. The resulting model, OmniVLA, achieves strong generalization to unseen environments, robustness to scarce modalities, and the ability to follow novel natural language instructions. We demonstrate that OmniVLA outperforms specialist baselines across modalities and offers a flexible foundation for fine-tuning to new modalities and tasks. We believe OmniVLA provides a step toward broadly generalizable and flexible navigation policies, and a scalable path for building omni-modal robotic foundation models.
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+      <!-- Paper video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <video autoplay controls muted loop playsinline width="100%">
+              <source src="static/videos_mbra/overview.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Approach</h2>
+          <div class="content has-text-justified has-text-centered">
+            <h3 class="title is-4">Motivation</h3>
+            <p>
+            Our goal in this work is to enable end-to-end training of navigation policies for ground robots that can generalize broadly to a wide range of environments and follow reasonable conventions such as staying on paths and avoiding collisions. This requires large amounts of training data, which we can obtain from low-cost robotic platforms and crowd-sourced data collection. While these sources can provide large amounts of data, this data is of low quality: the actions might not be consistently good, and even when they are, the sensors and state estimators on the robot might not allow for accurately estimating the next waypoint that corresponds to the human driver's intent. To address this, we propose <b>M</b>odel-<b>B</b>ased <b>R</b>e<b>A</b>nnotation <b>(MBRA)</b> to relabel data. We train the <b>Lo</b>ng-range <b>Go</b>al pose-conditioned <b>Nav</b>igation policy <b>(LoGoNav)</b> with its relabeled actions.
+            </p>          
+            <h3 class="title is-4">Model-based Re-Annotation (MBRA)</h3>
+            <p>
+            In MBRA, we first apply an extended Kalman filter to denoise the action commands in the noisy dataset and prepare a set of small publicly available navigation datasets with accurate action labels. Filtering the dataset is not enough to mitigate noise, so we train a re-annotation model with model-based learning. Since model-based learning is robust for noisy data, we can incorporate both the accurate GNM dataset and the large but noisy FrodoBot 2k dataset to train the re-annotation model. This model learns to predict actions between temporally close image frames and therefore we can directly use this model as a short-horizon goal-image conditioned navigation policy. We use the re-annotation policy to create more useful action labels for trajectories in the large dataset and then train the long-horizon navigation policy on this re-annotated dataset, which can robustly navigate the robot toward goal poses about 50 meter away.
+            </p>
+            <img src="./static/images_mbra/system_overview.png" />       
+            <h3 class="title is-4">Dataset</h3>
+            <p>
+            We use a <a href="https://huggingface.co/datasets/frodobots/FrodoBots-2K">FrodoBots-2k dataset</a>, which was collected in more than 10 cities around the world with remote teleoperation. The FrodoBots-2k dataset includes 2000 hours of gameplay and was collected as part of FrodoBots AI, where users explore locations worldwide by teleoperating robots to reach target positions. The FrodoBots-2k dataset is significantly larger than other publicly available datasets for vision-based navigation tasks. As shown in our paper, the full version of the FrodoBots-2k dataset is more than 25 times larger than other datasets and includes a diverse set of real robot trajectories teleoperated by humans. The FrodoBots-2k dataset includes the sequence of the front- and back-side camera image, GPS position, IMU sensor and wheel odometery for about 2000 hours. 
+            </p>
+            <p>
+            We also evaluate the ability of MBRA to enable the use of non-robot data. We reannotate 100 hours of action-free in-the-wild YouTube videos, listed in <a href="https://learning-language-navigation.github.io/">LeLaN project</a>, and train a policy with the generated actions. These videos include inside and outside walking tours from 32 different countries across varying weather conditions, time of day, and environment types (urban, rural, etc.).
+            </p>
+            <p>
+            In addition, we use the GNM mixture containing multiple dataset with different robotic platforms such as <a href="https://cvgl.stanford.edu/gonet/dataset/">GO Stanford2</a>, <a href="https://svl.stanford.edu/projects/dvmpc/dataset/">GO Stanford4</a>, <a href="https://sites.google.com/view/sacson-review/huron-dataset?authuser=0">HuRoN(SACSoN)</a>, <a href="https://sites.google.com/view/recon-robot/">RECON</a>, <a href="https://www.cs.utexas.edu/~xiao/SCAND/SCAND.html">SCAND</a>, <a href="https://arxiv.org/abs/1709.10489">CoryHall</a>, <a href="https://github.com/castacks/tartan_drive">TartanDrive</a> and <a href="https://github.com/JHLee0513/semantic_bevnet">Seattle</a>. Since all these dataset are collected with the robots with rich sensor system and teleoperated by experts, action labels are more accurate. 
+            </p>                
+                 
+            <h3 class="title is-4">Evaluation around the world</h3>
+            <p>
+            To assess generalization capabilities, we deploy our navigation policies on robots in diverse environments across 6 countries: USA, Mexico, China, Mauritius, Costa Rica, and Brazil. In total, we collect 24 topological graphs and evaluate each goal trajectory. To the best of our knowledge, we are the first to conduct a global evaluation for visual navigation.
+            </p>    
+            <center>    
+            <video autoplay muted loop playsinline width="90%">
+              <source src="static/videos_mbra/ev_map.mp4" type="video/mp4">
+            </video>     
+          </div>
+        </div>
+      </div>
+
+      <section class="section">
+        <div class="container is-max-desktop">
+
+          <div class="columns is-centered">
+
+
+            <!-- Animation. -->
+            <div class="columns is-centered">
+              <div class="column is-full-width">
+                <h2 class="title is-3">Experiments</h2>
+
+                <!-- Interpolating. -->
+                <h3 class="title is-4">Long-distance Navigation (LogoNav)</h3>
+                <div class="content has-text-justified">
+                  <p>
+                  We evaluate our trained policy on long-distance navigation, where the policy must reach a target position several hundreds of meters away from the start point without collision or getting stuck.
+                  </p>
+                </div>
+                
+                <h2 class="title is-5">Public park : 330 meters</h2>
+                <div class="content has-text-justified">
+                <center>  
+                <video autoplay controls muted loop playsinline width="80%">
+                  <source src="static/videos_mbra/long_dist_park.mp4" type="video/mp4">
+                </video> 
+                </div>                   
+                </center>           
+                <h2 class="title is-5">University campus (human-occupied space) : 280 meters</h2>
+                <div class="content has-text-justified">
+                <center>  
+                <video autoplay controls muted loop playsinline width="80%">
+                  <source src="static/videos_mbra/long_dist_campus.mp4" type="video/mp4">
+                </video>     
+                </center>
+                </div>                                                      
+          </div>
+      </section>     
+
+      <section class="section">
+        <div class="container is-max-desktop">
+
+          <div class="columns is-centered">
+
+
+            <!-- Animation. -->
+            <div class="columns is-centered">
+              <div class="column is-full-width">
+                <br />
+                <!--/ Interpolating. -->
+
+                <!-- Re-rendering. -->
+                <h3 class="title is-4">Cross Embodiment Navigation</h3>
+                <div class="content has-text-justified">
+                  <p>
+                  We deploy the long-range goal pose-conditioned navigation policy on other robot embodiments, including a Unitree GO1 quadruped robot, and Vizbot, a Roomba-based prototype mobile robot in indoor and outdoor settings. With the GO1 and Vizbot, we mount different cameras to investigate the cross-embodiment performance of our policy. We achieve good goal-reaching behavior in long navigation about 100 meters, highlighting the policy's ability to generalize. 
+                  </p>
+                </div>
+          </div>
+      </section>
+
+    <!-- Results Carousel -->
+    <section class="hero is-light is-small">
+        <div class="hero-body">
+            <div class="container">
+                <div id="results-carousel" class="carousel results-carousel">
+                    <div class="item item-bww1">
+                        <video poster="" id="go1_1" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/quad_6.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="item item-tello">
+                        <video poster="" id="d435_1" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/frodobot_1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="item item-go1-outside">
+                        <video poster="" id="height_1" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/vizbot_1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="item item-go1-outside">
+                        <video poster="" id="ricoh_1" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/quad_2.mp4" type="video/mp4">
+                        </video>
+                    </div>                    
+                    <div class="item item-soda3-left">
+                        <video poster="" id="d435_2" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/frodobot_2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="item item-go1-outside">
+                        <video poster="" id="ricoh_1" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/go1_pose_nav_1.mp4" type="video/mp4">
+                        </video>
+                    </div>                       
+                    <div class="item item-go1-outside">
+                        <video poster="" id="ricoh_1" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/vizbot_pose_nav_1.mp4" type="video/mp4">
+                        </video>
+                    </div>                              
+                    <div class="item item-go1-outside">
+                        <video poster="" id="ricoh_1" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/quad_4.mp4" type="video/mp4">
+                        </video>
+                    </div>                         
+                    
+                    <div class="item item-rfs">
+                        <video poster="" id="fisheye_1" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/vizbot_2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="item item-go1-outside">
+                        <video poster="" id="ricoh_1" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/go1_pose_nav_2.mp4" type="video/mp4">
+                        </video>
+                    </div>                       
+                    <div class="item item-go1-outside">
+                        <video poster="" id="ricoh_1" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/vizbot_pose_nav_2.mp4" type="video/mp4">
+                        </video>
+                    </div>                        
+                    <div class="item item-go1-outside">
+                        <video poster="" id="ricoh_1" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/quad_1.mp4" type="video/mp4">
+                        </video>
+                    </div>        
+                    <div class="item item-go1-outside">
+                        <video poster="" id="ricoh_1" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/go1_pose_nav_3.mp4" type="video/mp4">
+                        </video>
+                    </div>                       
+                    <div class="item item-go1-outside">
+                        <video poster="" id="ricoh_1" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/vizbot_pose_nav_3.mp4" type="video/mp4">
+                        </video>
+                    </div>                                         
+                    <div class="item item-go1-outside">
+                        <video poster="" id="ricoh_2" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/quad_3.mp4" type="video/mp4">
+                        </video>
+                    </div>                       
+                    <div class="item item-go1-inside-1">
+                        <video poster="" id="go1_2" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/frodobot_3.mp4" type="video/mp4">
+                        </video>
+                    </div>       
+                    <div class="item item-go1-outside">
+                        <video poster="" id="ricoh_1" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/go1_pose_nav_4.mp4" type="video/mp4">
+                        </video>
+                    </div>                       
+                    <div class="item item-go1-outside">
+                        <video poster="" id="ricoh_1" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/vizbot_pose_nav_4.mp4" type="video/mp4">
+                        </video>
+                    </div>                         
+                    <div class="item item-go1-outside">
+                        <video poster="" id="ricoh_1" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/quad_5.mp4" type="video/mp4">
+                        </video>
+                    </div>          
+                    <div class="item item-go1-outside">
+                        <video poster="" id="ricoh_1" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/go1_pose_nav_5.mp4" type="video/mp4">
+                        </video>
+                    </div>                      
+                                                       
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <section class="section">
+        <div class="container is-max-desktop">
+
+          <div class="columns is-centered">
+
+
+            <!-- Animation. -->
+            <div class="columns is-centered">
+              <div class="column is-full-width">
+                <br />
+                <!--/ Interpolating. -->
+
+                <!-- Re-rendering. -->
+                <h3 class="title is-4">Goal image-conditioned navigation (MBRA)</h3>
+                <div class="content has-text-justified">
+                  <p>
+                  In addition to LoGoNav, we evaluate the goal image-conditioned navigation policy, which results from our MBRA method. The policy resulting from MBRA can navigate the robot towards a goal up to 3 meters away, so we can use a topological memory to move to a goal position further away, similar to other vision-based navigation approaches. To collect this goal loop, we teleoperate the robot and record image observations at a fixed frame rate of 1 Hz. To deploy the policy, we start from the initial observation and continuously estimate the closest node from the topological memory. At each time step, we feed the image from the next node as the goal image to our policy to compute the next action. Our MBRA enables us to navigate the robot toward goal poses far away with visual imformation only.
+                  </p>
+                </div>
+          </div>
+      </section>
+
+    <!-- Results Carousel -->
+    <section class="hero is-light is-small">
+        <div class="hero-body">
+            <div class="container">
+                <div id="results-carousel" class="carousel results-carousel">
+                    <div class="item item-bww1">
+                        <video poster="" id="bww1" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/goal_image_1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="item item-tello">
+                        <video poster="" id="tello" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/image_cond_nav_1.mp4" type="video/mp4">
+                        </video>
+                    </div>       
+                    <div class="item item-tello">
+                        <video poster="" id="tello" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/image_cond_nav_3.mp4" type="video/mp4">
+                        </video>
+                    </div>                                               
+                    <div class="item item-tello">
+                        <video poster="" id="tello" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/goal_image_2.mp4" type="video/mp4">
+                        </video>
+                    </div>           
+                    <div class="item item-tello">
+                        <video poster="" id="tello" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/image_cond_nav_2.mp4" type="video/mp4">
+                        </video>
+                    </div>      
+                    <div class="item item-tello">
+                        <video poster="" id="tello" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos_mbra/image_cond_nav_4.mp4" type="video/mp4">
+                        </video>
+                    </div>                                                 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="BibTeX">  
+      <div class="container is-max-desktop">    
+        <h2 class="title">BibTeX</h2>
+        <pre><code> @misc{hirose2025mbra,
+      title={Learning to Drive Anywhere with Model-Based Reannotation11}, 
+      author={Noriaki Hirose and Lydia Ignatova and Kyle Stachowicz and Catherine Glossop and Sergey Levine and Dhruv Shah},
+      year={2025},
+      eprint={2505.05592},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2505.05592}, 
+      }</code></pre>            
+      </div>
+    </section>
+
+    <br>
+    <center class="is-size-10">
+      The website (<a href="https://github.com/model-base-reannotation/model-base-reannotation">source code</a>) design was adapted from <a href="https://nerfies.github.io" class="external-link"><span
+                class="dnerf">Nerfies</span></a>.
+    </center>
+    <br>
+</body>
+
+</html>
