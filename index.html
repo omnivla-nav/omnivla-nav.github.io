@@ -244,7 +244,7 @@ across all datasets.
               <div class="column is-full-width">
                 <h2 class="title is-3">Experiments</h2>
                 <p>
-                  We evaluate our trained policy on long-distance navigation, where the policy must reach a target position several hundreds of meters away from the start point without collision or getting stuck. 
+                  We evaluate OmniVLA on language-, 2D goal pose-, and egocentric goal image-conditioned navigation across different robots to analyze cross-embodiment performance.
                 </p>                                                
           </div>
       </section>     
@@ -264,7 +264,7 @@ across all datasets.
                 <h3 class="title is-4">Language-conditioned navigation (Out-Of-Distribution prompt)</h3>
                 <div class="content has-text-justified">
                   <p>
-                  We deploy the long-range goal pose-conditioned navigation policy on other robot embodiments, including a Unitree GO1 quadruped robot, and Vizbot, a Roomba-based prototype mobile robot in indoor and outdoor settings. With the GO1 and Vizbot, we mount different cameras to investigate the cross-embodiment performance of our policy. We achieve good goal-reaching behavior in long navigation about 100 meters, highlighting the policy's ability to generalize. 
+                  We deploy OmniVLA on the FrodoBots and ERZ for language-conditioned navigation. In these videos, we provide out-of-distribution language prompts that both instruct the robot on how to move and specify the target location. Our training dataset includes prompts such as “move toward X,” where X denotes the target object. 
                   </p>
                 </div>
           </div>
@@ -331,7 +331,7 @@ across all datasets.
                 <h3 class="title is-4">Language-conditioned navigation (In-Distribution prompt)</h3>
                 <div class="content has-text-justified">
                   <p>
-                  We deploy the long-range goal pose-conditioned navigation policy on other robot embodiments, including a Unitree GO1 quadruped robot, and Vizbot, a Roomba-based prototype mobile robot in indoor and outdoor settings. With the GO1 and Vizbot, we mount different cameras to investigate the cross-embodiment performance of our policy. We achieve good goal-reaching behavior in long navigation about 100 meters, highlighting the policy's ability to generalize. 
+                  The following videos use in-distribution language prompts. Our policy successfully avoids collisions with obstacles between the robot’s starting position and the target objects.
                   </p>
                 </div>
           </div>
@@ -378,7 +378,7 @@ across all datasets.
                 <h3 class="title is-4">Language-conditioned navigation (Cross embodiment analysis)</h3>
                 <div class="content has-text-justified">
                   <p>
-                  We deploy the long-range goal pose-conditioned navigation policy on other robot embodiments, including a Unitree GO1 quadruped robot, and Vizbot, a Roomba-based prototype mobile robot in indoor and outdoor settings. With the GO1 and Vizbot, we mount different cameras to investigate the cross-embodiment performance of our policy. We achieve good goal-reaching behavior in long navigation about 100 meters, highlighting the policy's ability to generalize. 
+                  We deploy OmniVLA on other robot embodiments, including the Unitree GO1 quadruped and Vizbot, a Roomba-based prototype, in both indoor and outdoor settings. Using different cameras on the GO1 and Vizbot, we evaluate the cross-embodiment performance of our policy. The robots achieve successful goal-reaching behavior even in the most challenging language-conditioned navigation tasks, highlighting the policy’s generalization ability. 
                   </p>
                 </div>
           </div>
@@ -455,7 +455,7 @@ across all datasets.
                 <h3 class="title is-4">Multi-modal conditioned navigation (Language & 2D pose)</h3>
                 <div class="content has-text-justified">
                   <p>
-                  We deploy the long-range goal pose-conditioned navigation policy on other robot embodiments, including a Unitree GO1 quadruped robot, and Vizbot, a Roomba-based prototype mobile robot in indoor and outdoor settings. With the GO1 and Vizbot, we mount different cameras to investigate the cross-embodiment performance of our policy. We achieve good goal-reaching behavior in long navigation about 100 meters, highlighting the policy's ability to generalize. 
+                  By training on omni-modal task representations, OmniVLA can learn to follow multiple goal signals. We conduct experiments where tasks are specified by providing both 2D goal poses (<b>where?</b>}) and behavioral language instructions (<b>how?</b>) in 10 different environments.
                   </p>
                 </div>
           </div>
@@ -502,7 +502,7 @@ across all datasets.
                 <h3 class="title is-4">2D goal pose-conditioned navigation</h3>
                 <div class="content has-text-justified">
                   <p>
-                  We deploy the long-range goal pose-conditioned navigation policy on other robot embodiments, including a Unitree GO1 quadruped robot, and Vizbot, a Roomba-based prototype mobile robot in indoor and outdoor settings. With the GO1 and Vizbot, we mount different cameras to investigate the cross-embodiment performance of our policy. We achieve good goal-reaching behavior in long navigation about 100 meters, highlighting the policy's ability to generalize. 
+                  We deploy OmniVLA for long-range 2D goal pose-conditioned navigation. Conditioned on 2D goal poses, our policy navigates to targets 25–100 meters from the robot’s starting position. GPS is used to estimate both the robot’s location and the target goal position.
                   </p>
                 </div>
           </div>
@@ -564,7 +564,7 @@ across all datasets.
                 <h3 class="title is-4">Egocentric goal image-conditioned navigation</h3>
                 <div class="content has-text-justified">
                   <p>
-                  In addition to LoGoNav, we evaluate the goal image-conditioned navigation policy, which results from our MBRA method. The policy resulting from MBRA can navigate the robot towards a goal up to 3 meters away, so we can use a topological memory to move to a goal position further away, similar to other vision-based navigation approaches. To collect this goal loop, we teleoperate the robot and record image observations at a fixed frame rate of 1 Hz. To deploy the policy, we start from the initial observation and continuously estimate the closest node from the topological memory. At each time step, we feed the image from the next node as the goal image to our policy to compute the next action. Our MBRA enables us to navigate the robot toward goal poses far away with visual imformation only.
+                  In addition to language- and 2D pose-conditioned navigation, we evaluate the egocentric goal image-conditioned navigation policy, primarily in indoor environments. Similar to prior image-conditioned approaches such as ViNT, ExAug, and NoMaD, our policy can navigate toward goals up to 3 meters away, enabling the use of a topological memory for reaching more distant targets. To collect this goal loop, we teleoperate the robot and record image observations at a fixed frame rate of 1 Hz. During deployment, we start from the initial observation and continuously identify the closest node in the topological memory. At each time step, the image from the next node is provided as the goal image to compute the next action. Our OmniVLA supports navigation using multiple modalities to specify both the goal location and the desired movement.
                   </p>
                 </div>
           </div>
