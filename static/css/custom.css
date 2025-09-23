@@ -2,3 +2,8 @@
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+
+.publication-video {
+  text-align: center;
+  margin-bottom: 1rem;  /* <-- small space after video */
+}
